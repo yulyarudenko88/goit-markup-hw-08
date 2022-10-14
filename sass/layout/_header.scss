@@ -4,40 +4,45 @@
 
 .header__body {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.header__contacts {
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
+.header__dropdown-menu {
+  display: none;
 }
 
-.header__contact {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+// .header__contacts {
+//   display: flex;
+//   margin-left: auto;
+//   gap: 50px;
+// }
 
-  color: $desc-color;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+// .header__contact {
+//   display: flex;
+//   align-items: center;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
 
-  transition: color $time-function;
+//   color: $desc-color;
+//   font-weight: 500;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
+//   transition: color $time-function;
 
-.header__icon {
-  margin-right: 10px;
-  fill: currentColor;
-  transition: fill $time-function;
-}
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }
 
-.header__contact:hover .header__icon {
-  fill: currentColor;
-}
+// .header__icon {
+//   margin-right: 10px;
+//   fill: currentColor;
+//   transition: fill $time-function;
+// }
+
+// .header__contact:hover .header__icon {
+//   fill: currentColor;
+// }

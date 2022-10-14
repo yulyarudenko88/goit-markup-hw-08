@@ -20,6 +20,24 @@
   }
 }
 
+.button__icon {
+  fill: currentColor;
+  transition: fill $time-function;
+}
+
+.button__menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover .button__icon,
+  &:focus .button__icon {
+    fill: $accent-color;
+  }
+}
+
 .button-icon {
   display: flex;
   justify-content: center;
