@@ -1,0 +1,23 @@
+.clients-section__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-section__link {
+  @extend %flex;
+  @include size(170px, 92px);
+
+  @include border(1px, solid, $social-icon-color);
+  border-radius: 4px;
+
+  fill: $social-icon-color;
+
+  transition: fill $time-function, border $time-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    @include border(1px, solid, $accent-color);
+  }
+}

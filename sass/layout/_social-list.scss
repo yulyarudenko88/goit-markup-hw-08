@@ -1,0 +1,33 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-list__link {
+  @extend %flex;
+  @include size(44px, 44px);
+  border-radius: 50%;
+
+  fill: $social-icon-color;
+
+  transition: background-color $time-function, fill $time-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $white-color;
+  }
+}
+
+.social-list__link-color {
+  background: $footer-socials-background;
+  fill: $white-color;
+
+  transition: background $time-function;
+
+  &:hover,
+  &:focus {
+    background: $accent-color;
+  }
+}

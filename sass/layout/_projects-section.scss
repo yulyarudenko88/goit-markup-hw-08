@@ -1,0 +1,68 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.projects-item .link {
+  display: block;
+  transition: box-shadow $time-function;
+}
+
+.projects-item .link:hover,
+.projects-item .link:focus {
+  box-shadow: $shadow-projects-item;
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb .overlay-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(101%);
+  transition: transform $time-function;
+
+  padding: 63px 24px;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 1.6;
+  color: $white-color;
+  background-color: $project-overlay;
+}
+
+.project-thumb:hover .overlay-desc {
+  transform: translateY(0);
+}
+
+.project-title {
+  margin-bottom: 4px;
+
+  color: $title-color;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-desc {
+  color: $desc-color;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.project-container {
+  padding: 20px 24px;
+  border-right: 1px solid $border-project-color;
+  border-bottom: 1px solid $border-project-color;
+  border-left: 1px solid $border-project-color;
+}

@@ -1,0 +1,16 @@
+.logo {
+  color: $dark-logo-color;
+  font-family: $secondary-text-style;
+  @include font(700, 26px, 1.2);
+
+  &-white {
+    display: block;
+    margin-bottom: 20px;
+
+    color: $white-color;
+  }
+}
+
+.logo__accent {
+  color: $accent-color;
+}

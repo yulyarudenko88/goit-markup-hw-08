@@ -1,0 +1,30 @@
+.hero {
+  max-width: 1600px;
+  padding: 200px 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-image: linear-gradient(
+      $hero-linear-gradient,
+      $hero-linear-gradient
+    ),
+    url("../images/hero-banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: $hero-background-color;
+  text-align: center;
+}
+
+.hero__title {
+  max-width: 696px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+
+  color: $white-color;
+  @include font(900, 44px, 1.36);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
