@@ -29,10 +29,15 @@
   }
 }
 
-// .team-section__container {
-//   padding-top: 30px;
-//   padding-bottom: 30px;
-// }
+.team-section__container {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 30px;
+  }
+}
 
 .team-section__title {
   margin-bottom: 10px;
@@ -42,6 +47,7 @@
 
 .team-section__desc {
   margin-bottom: 16px;
+
   color: $desc-color;
   font-size: 16px;
   line-height: 1.19;
