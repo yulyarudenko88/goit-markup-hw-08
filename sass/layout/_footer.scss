@@ -1,5 +1,6 @@
 .footer {
-  // display: flex;
+  display: flex;
+  
   // align-items: center;
 
   padding-top: 60px;
@@ -13,11 +14,17 @@
 //     display: flex;
 //   align-items: baseline;
 // }
+
 @media screen and (max-width: 766px) {
   .footer__wrap:not(:last-child) {
     margin-bottom: 60px;
   }
 }
+
+.footer__wrap {
+  align-items: center;
+}
+
 
 // .footer__wrap {
 //   margin-right: 70px;

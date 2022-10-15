@@ -790,6 +790,9 @@ p {
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
@@ -801,6 +804,12 @@ p {
     margin-bottom: 60px;
   }
 }
+.footer__wrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .footer__item {
   display: block;
 }
