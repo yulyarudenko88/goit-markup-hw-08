@@ -32,11 +32,23 @@
   border: none;
   background-color: transparent;
 
+  & .button__menu-close {
+    display: none;
+  }
+
+  &.is-open .button__menu-close {
+    display: block;
+  }
+
+  &.is-open .button__menu {
+    display: none;
+  }
+
   &:hover .button__icon,
   &:focus .button__icon {
     fill: $accent-color;
   }
-}
+} 
 
 .button-icon {
   display: flex;

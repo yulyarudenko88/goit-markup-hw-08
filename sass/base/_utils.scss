@@ -16,18 +16,21 @@ body {
   padding-left: 0;
 }
 
-.container {
-  max-width: $mobile;
+.container {  
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (min-width: $tablet){
-    width: $tablet;
+  @include mobile {
+    width: 480px;
+  }
+  
+  @include tablet {
+    width: 767px;
   }
 
-  @media screen and (min-width: $desktop){
-    width: $desktop;
+  @include desctop {
+    width: 1200px;
   }
 }
 

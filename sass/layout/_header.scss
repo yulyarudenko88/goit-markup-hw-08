@@ -1,5 +1,9 @@
 .header {
-  @include border(1px, solid, $border-header-color);
+  border-bottom: 1px solid $border-header-color; 
+  padding: 10px 0;
+  // @media screen and (max-width: 767) {
+  //   position: relative;
+  // }
 }
 
 .header__body {
@@ -9,7 +13,22 @@
 }
 
 .header__dropdown-menu {
-  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform $time-function;
+
+  width: 100vw;
+  height: 100vw;
+  padding-top: 48px;
+  padding-left: 40px;
+
+  background-color: $white-color;
+
+  &.is-open {
+    transform: translateY(0);
+  }
 }
 
 // .header__contacts {

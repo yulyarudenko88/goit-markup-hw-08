@@ -17,12 +17,11 @@ body {
 }
 
 .container {
-  max-width: 480px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 768px) {
+@in @media screen and (min-width: $tablet) {
   .container {
     width: 768px;
   }
@@ -296,9 +295,8 @@ p {
 }
 
 .header {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 10px 0;
 }
 
 .header__body {
@@ -314,7 +312,24 @@ p {
 }
 
 .header__dropdown-menu {
-  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100vw;
+  height: 100vw;
+  padding-top: 48px;
+  padding-left: 40px;
+  background-color: #ffffff;
+}
+.header__dropdown-menu.is-open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .logo {
@@ -450,6 +465,15 @@ p {
   padding: 0;
   border: none;
   background-color: transparent;
+}
+.button__menu .button__menu-close {
+  display: none;
+}
+.button__menu.is-open .button__menu-close {
+  display: block;
+}
+.button__menu.is-open .button__menu {
+  display: none;
 }
 .button__menu:hover .button__icon, .button__menu:focus .button__icon {
   fill: #2196f3;
