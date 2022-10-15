@@ -31,19 +31,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-
-  & .button__menu-close {
-    display: none;
-  }
-
-  &.is-open .button__menu-close {
-    display: block;
-  }
-
-  &.is-open .button__menu {
-    display: none;
-  }
-
+ 
   &:hover .button__icon,
   &:focus .button__icon {
     fill: $accent-color;
@@ -51,7 +39,7 @@
 } 
 
 .button-icon {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -101,7 +89,7 @@
 }
 
 .button-form {
-  display: block;
+  display: inline-flex;
   margin-left: auto;
   margin-right: auto;
   @include size(200px, 50px);

@@ -316,26 +316,35 @@ p {
           align-items: center;
 }
 
-.header__dropdown-menu {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100vw;
-  height: 100vw;
-  padding-top: 48px;
-  padding-left: 40px;
-  background-color: #ffffff;
+.header__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #757575;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__dropdown-menu.is-open {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.header__contact:hover, .header__contact:focus {
+  color: #2196f3;
+}
+
+.header__icon {
+  margin-right: 10px;
+  fill: currentColor;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__contact:hover .header__icon {
+  fill: currentColor;
 }
 
 .logo {
@@ -479,23 +488,14 @@ p {
   border: none;
   background-color: transparent;
 }
-.button__menu .button__menu-close {
-  display: none;
-}
-.button__menu.is-open .button__menu-close {
-  display: block;
-}
-.button__menu.is-open .button__menu {
-  display: none;
-}
 .button__menu:hover .button__icon, .button__menu:focus .button__icon {
   fill: #2196f3;
 }
 
 .button-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -551,7 +551,9 @@ p {
 }
 
 .button-form {
-  display: block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
@@ -790,9 +792,7 @@ p {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;

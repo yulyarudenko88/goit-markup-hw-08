@@ -1,7 +1,5 @@
 .footer {
-  display: flex;
-  
-  // align-items: center;
+  text-align: center;
 
   padding-top: 60px;
   padding-bottom: 60px;
@@ -14,7 +12,6 @@
 //     display: flex;
 //   align-items: baseline;
 // }
-
 @media screen and (max-width: 766px) {
   .footer__wrap:not(:last-child) {
     margin-bottom: 60px;
