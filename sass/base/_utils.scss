@@ -21,21 +21,22 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
-  @include mobile {
-    width: 480px;
-  }
-  
-  @include tablet {
-    width: 767px;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
   }
 
-  @include desctop {
-    width: 1200px;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
   }
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  // padding: 94px 0;
 }
 
 img {

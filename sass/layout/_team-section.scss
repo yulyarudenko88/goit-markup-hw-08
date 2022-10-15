@@ -3,23 +3,36 @@
 }
 
 .team-section__list {
-  display: flex;
-  text-align: center;
-  gap: 30px;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    text-align: center;
+    gap: 30px;
+  }
 }
 
 .team-section__item {
-  flex-basis: calc((100% - 90px) / 4);
-
   background-color: $white-color;
   box-shadow: $shadow-img;
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: $mobile) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 766px) {
+      margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
-.team-section__container {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+// .team-section__container {
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+// }
 
 .team-section__title {
   margin-bottom: 10px;
