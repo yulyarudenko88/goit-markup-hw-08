@@ -24,12 +24,12 @@
         <a class="logo link" href="./index.html">
           <span class="logo__accent">Web</span>Studio
         </a>
-        <button class="button__menu" type="button" aria-disabled="false" aria-controls="mobile-menu">
+        <button class="button__menu js-open-menu" type="button" aria-disabled="false" aria-controls="mobile-menu">
           <svg class="button__icon" width="40" height="40">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
-        <div class="header__dropdown-menu" id="mobile-menu">
+        <div class="header__dropdown-menu js-menu-container" id="mobile-menu">
           <button class="button__menu js-close-menu" type="button" aria-disabled="false" aria-controls="mobile-menu">
             <svg class="button__icon" width="40" height="40">
               <use href="./images/icons.svg#icon-close_menu"></use>
@@ -52,6 +52,13 @@
           </nav>
           <ul class="header__contacts list">
             <li class="header__item">
+              <a class="header__contact header__contact--blue link" href="tel:+380961111111"
+                ><svg class="header__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11
+              </a>
+            </li>
+            <li class="header__item">
               <a class="header__contact link" href="mailto:@devstudio.com">
                 <svg class="header__icon" width="16" height="12">
                   <use href="./images/icons.svg#icon-envelope"></use>
@@ -59,26 +66,19 @@
                 info@devstudio.com
               </a>
             </li>
-            <li class="header__item">
-              <a class="header__contact link" href="tel:+380961111111"
-                ><svg class="header__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use></svg
-                >+38 096 111 11 11
-              </a>
-            </li>
           </ul>
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">Instagram</a>
+          <ul class="menu-social-list list">
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">Instagram</a>
             </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">Twitter</a>
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">Twitter</a>
             </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">Facebook</a>
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">Facebook</a>
             </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">LinkedIn</a>
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">LinkedIn</a>
             </li>
           </ul>
         </div>

@@ -24,7 +24,7 @@
 
 .benefits-section__wrap {
   @include size(100%, 120px);
-  padding: 25px 190px;
+  @extend %flex;
   margin-bottom: 30px;
   border-radius: 4px;
 
