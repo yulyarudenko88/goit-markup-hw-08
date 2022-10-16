@@ -1,45 +1,95 @@
 .header {
   border-bottom: 1px solid $border-header-color; 
-  padding: 10px 0;
+  // padding: 10px 0;
 }
 
 .header__body {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
-// .header__contacts {
-//   display: flex;
-//   margin-left: auto;
-//   gap: 50px;
-// }
+.header__dropdown-menu {
+  display: flex;
+}
 
-// .header__contact {
-//   display: flex;
-//   align-items: center;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
+.header__contacts {
+  display: flex;
+  margin-left: auto;
+  
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    flex-direction: column-reverse;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
 
-//   color: $desc-color;
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
+  @media screen and (min-width: $desktop) {
+    gap: 50px;
+  }
+}
 
-//   transition: color $time-function;
+@media screen and (min-width: $tablet) {
+  .header__item:not(:first-child) {
+    margin-bottom: 10px;
+  }
+}
 
-//   &:hover,
-//   &:focus {
-//     color: $accent-color;
-//   }
-// }
+.header__contact {
+  // display: flex;
+  // align-items: center;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
 
-// .header__icon {
-//   margin-right: 10px;
-//   fill: currentColor;
-//   transition: fill $time-function;
-// }
+  color: $desc-color;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
 
-// .header__contact:hover .header__icon {
-//   fill: currentColor;
-// }
+  transition: color $time-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.14;
+  }
+}
+
+.header__icon {
+  margin-right: 8px;
+  @include size(10px, 14px);
+  fill: currentColor;
+  transition: fill $time-function;
+
+  @media screen and (min-width: $desktop) {
+    @include size(10px, 16px);
+    margin-right: 10px;
+  }
+
+  &--size {
+    @include size(14px, 10px);
+
+    @media screen and (min-width: $desktop) {
+      @include size(16px, 12px);
+    }
+  }
+}
+
+.header__contact:hover .header__icon {
+  fill: currentColor;
+}
+
+@media screen and (min-width: $tablet) {
+  .menu-social-list {
+    display: none;
+  }
+}
