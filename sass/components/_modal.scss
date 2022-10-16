@@ -27,20 +27,29 @@
   transition: scale $time-function;
 
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   border-radius: 4px;
 
   background-color: $white-color;
   box-shadow: $shadow-modal;
+
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__title {
   margin-top: 0;
   margin-bottom: 12px;
 
-  @include font(700, 20px, 1.15);
+  @include font(700, 20px, 1.5);
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    @include font(700, 20px, 1.15);
+  }
 }
 
 .form__field {
@@ -120,30 +129,39 @@
 
 .checkbox__label {
   display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
-.checkbox__input:hover ~ .checkbox__iconWrap > .checkbox__uncheked,
-.checkbox__input:focus ~ .checkbox__iconWrap > .checkbox__uncheked {
+.checkbox__input:hover ~ .checkbox__icon-wrap > .checkbox__uncheked,
+.checkbox__input:focus ~ .checkbox__icon-wrap > .checkbox__uncheked {
   fill: $accent-color;
 }
 
 .checkbox__desc {
-  margin-right: 5px;
+  margin-right: 8px;
 
   line-height: 1.17;
   color: $desc-color;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.71;
+  }
 }
 
-.checkbox__input:checked + .checkbox__iconWrap > .checkbox__cheked {
+.checkbox__input:checked + .checkbox__icon-wrap > .checkbox__cheked {
   opacity: 1;
 }
 
-.checkbox__input:checked + .checkbox__iconWrap > .checkbox__unchecked {
+.checkbox__input:checked + .checkbox__icon-wrap > .checkbox__unchecked {
   opacity: 0;
 }
 
-.checkbox__iconWrap {
+.checkbox__icon-wrap {
   position: relative;
   margin-right: 8px;
 }
@@ -177,4 +195,12 @@
 .checkbox__link {
   line-height: 1.17;
   color: $accent-color;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.71;
+  }
 }

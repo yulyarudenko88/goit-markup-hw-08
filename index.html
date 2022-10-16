@@ -24,13 +24,23 @@
         <a class="logo link" href="./index.html">
           <span class="logo__accent">Web</span>Studio
         </a>
-        <button class="button__menu js-open-menu" type="button" aria-disabled="false" aria-controls="mobile-menu">
+        <button
+          class="button__menu js-open-menu"
+          type="button"
+          aria-disabled="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="button__icon" width="40" height="40">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
         <div class="header__dropdown-menu js-menu-container" id="mobile-menu">
-          <button class="button__menu js-close-menu" type="button" aria-disabled="false" aria-controls="mobile-menu">
+          <button
+            class="button__menu js-close-menu"
+            type="button"
+            aria-disabled="false"
+            aria-controls="mobile-close-menu"
+          >
             <svg class="button__icon" width="40" height="40">
               <use href="./images/icons.svg#icon-close_menu"></use>
             </svg>
@@ -52,7 +62,9 @@
           </nav>
           <ul class="header__contacts list">
             <li class="header__item">
-              <a class="header__contact header__contact--blue link" href="tel:+380961111111"
+              <a
+                class="header__contact header__contact--blue link"
+                href="tel:+380961111111"
                 ><svg class="header__icon" width="10" height="16">
                   <use href="./images/icons.svg#icon-smartphone"></use></svg
                 >+38 096 111 11 11
@@ -153,21 +165,24 @@
             <li class="activity-section__item">
               <div class="activity-section__thumb">
                 <img
-                  src="./images/web-development.jpg"
-                  alt="Web-розробник пише код майбутньго сайту"
-                  width="370"
-                  height="294"
-                />
+                  srcset="
+                    ./images/desktop/web-development.jpg 1x,
+                    ./images/desktop/web-development@2x.jpg 2x
+                  "
+                  src="./images/desktop/web-development.jpg"
+                  alt="Web-розробник пише код майбутньго сайту"/>
                 <h3 class="activity-section__title">Десктопні додатки</h3>
               </div>
             </li>
             <li class="activity-section__item">
               <div class="activity-section__thumb">
                 <img
-                  src="./images/mobile-application.jpg"
+                  srcset="
+                    ./images/desktop/mobile-application.jpg 1x,
+                    ./images/desktop/mobile-application@2x.jpg 2x
+                  "
+                  src="./images/desktop/mobile-application.jpg"
                   alt="Web-розробник створює мобільний додаток"
-                  width="370"
-                  height="294"
                 />
                 <h3 class="activity-section__title">Мобільні додатки</h3>
               </div>
@@ -175,10 +190,12 @@
             <li class="activity-section__item">
               <div class="activity-section__thumb">
                 <img
-                  src="./images/web-design.jpg"
+                  srcset="
+                    ./images/desktop/web-design.jpg 1x,
+                    ./images/desktop/web-design@2x.jpg 2x
+                  "
+                  src="./images/desktop/web-design.jpg"
                   alt="Web-дизайнер обираю кольори для макету сайту"
-                  width="370"
-                  height="294"
                 />
                 <h3 class="activity-section__title">Дизайнерські рішення</h3>
               </div>
@@ -192,10 +209,30 @@
           <ul class="team-section__list list">
             <li class="team-section__item">
               <picture>
-                
+                <source
+                  srcset="
+                    ./images/mobile/ihor-demyanenko.jpg 1x,
+                    ./images/mobile/ihor-demyanenko@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/ihor-demyanenko.jpg 1x,
+                    ./images/tablet/ihor-demyanenko.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/ihor-demyanenko.jpg 1x,
+                    ./images/desktop/ihor-demyanenko@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
                 <img
-                src="./images/ihor-demyanenko.jpg"
-                alt="Усміхнений молодий чоловік в окулярах з бородою"
+                  src="./images/mobile/ihor-demyanenko.jpg"
+                  alt="Усміхнений молодий чоловік в окулярах з бородою"
                 />
               </picture>
               <div class="team-section__container">
@@ -235,9 +272,30 @@
             </li>
             <li class="team-section__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/mobile/olga-repina.jpg 1x,
+                    ./images/mobile/olga-repina@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/olga-repina.jpg 1x,
+                    ./images/tablet/olga-repina@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/olga-repina.jpg 1x,
+                    ./images/desktop/olga-repina@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
                 <img
-                src="./images/olga-repina.jpg"
-                alt="Красива, молода, усміхнена жінка в окулярах, блондинка"
+                  src="./images/mobile/olga-repina.jpg"
+                  alt="Красива, молода, усміхнена жінка в окулярах, блондинка"
                 />
               </picture>
               <div class="team-section__container">
@@ -277,9 +335,30 @@
             </li>
             <li class="team-section__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/mobile/mykola-tarasov.jpg 1x,
+                    ./images/mobile/mykola-tarasov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/mykola-tarasov.jpg 1x,
+                    ./images/tablet/mykola-tarasov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/mykola-tarasov.jpg 1x,
+                    ./images/desktop/mykola-tarasov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
                 <img
-                src="./images/mykola-tarasov.jpg"
-                alt="Усміхнений молодий чоловік зі стильною зачіскою"
+                  src="./images/mobile/mykola-tarasov.jpg"
+                  alt="Усміхнений молодий чоловік зі стильною зачіскою"
                 />
               </picture>
               <div class="team-section__container">
@@ -319,9 +398,30 @@
             </li>
             <li class="team-section__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/mobile/mykhailo-yermakov.jpg 1x,
+                    ./images/mobile/mykhailo-yermakov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/mykhailo-yermakov.jpg 1x,
+                    ./images/tablet/mykhailo-yermakov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/mykhailo-yermakov.jpg 1x,
+                    ./images/desktop/mykhailo-yermakov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
                 <img
-                src="./images/mykhailo-yermakov.jpg"
-                alt="Русявий молодий чоловік з бородою в окулярах"
+                  src="./images/mobile/mykhailo-yermakov.jpg"
+                  alt="Русявий молодий чоловік з бородою в окулярах"
                 />
               </picture>
               <div class="team-section__container">
@@ -559,7 +659,7 @@
                 value="checkbox"
                 id="checkbox"
               />
-              <svg class="checkbox__iconWrap" width="16" height="15">
+              <svg class="checkbox__icon-wrap" width="16" height="15">
                 <use
                   class="checkbox__uncheked"
                   href="./images/icons.svg#icon-checkbox"
@@ -575,7 +675,7 @@
             </label>
             <a class="checkbox__link" href="#">Умови договору</a>
           </div>
-          <button class="button button-form" type="submit">Відправити</button>
+          <button class="button button__form" type="submit">Відправити</button>
         </form>
       </div>
     </div>

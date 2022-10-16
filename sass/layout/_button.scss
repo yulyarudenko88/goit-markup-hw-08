@@ -99,8 +99,9 @@
   }
 }
 
-.button-form {
-  display: inline-flex;
+.button__form {
+  display: block;
+  
   margin-left: auto;
   margin-right: auto;
   @include size(200px, 50px);
