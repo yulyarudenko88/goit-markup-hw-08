@@ -1,12 +1,18 @@
 .clients-section__list {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
-  // justify-content: center;  
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }  
 }
 
 .clients-section__item {
   flex-basis: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
 
 .clients-section__link {

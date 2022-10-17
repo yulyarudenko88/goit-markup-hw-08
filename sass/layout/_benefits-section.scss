@@ -3,24 +3,32 @@
 
   @media screen and (min-width: $desktop) {
     padding: 94px 0 47px 0;
-  }  
+  }
 }
 
-// .benefits-section__list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 30px;
-// }
+.benefits-section__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
-// .benefits-section__item {
-//   flex-basis: calc((100% - 90px) / 4);
-// }
-// @media screen and (max-width: 767px) {
-//   .benefits-section__item:not(:last-child) {
-//     margin-bottom: 30px;
-//   }
-// }
+.benefits-section__item {
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-section__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 
 .benefits-section__wrap {
   @include size(100%, 120px);
@@ -33,14 +41,13 @@
   @media screen and (min-width: $desktop) {
     @include size(270px, 120px);
     padding: 25px 100px;
-  } 
+  }
 }
 
 .benefits-section__title {
   margin-bottom: 10px;
 
   @include font(700, 14px, 1.14);
-  text-align: center;
   text-transform: uppercase;
 
   @media screen and (max-width: $tablet) {

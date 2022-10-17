@@ -1,6 +1,9 @@
 .header {
   border-bottom: 1px solid $border-header-color; 
-  // padding: 10px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 10px 0;
+  }
 }
 
 .header__body {
@@ -10,20 +13,26 @@
   @media screen and (max-width: 767px) {
     justify-content: space-between;
   }
+
+  @media screen and (min-width: $tablet) {
+    gap: 87px;
+  }
 }
 
 .header__dropdown-menu {
   display: flex;
+
+  @media screen and (min-width: $tablet) {
+    gap: 87px;
+  }
 }
 
 .header__contacts {
   display: flex;
-  margin-left: auto;
+  justify-content: center;
   
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-direction: column-reverse;
-    padding-top: 21px;
-    padding-bottom: 21px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -38,11 +47,6 @@
 }
 
 .header__contact {
-  // display: flex;
-  // align-items: center;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
-
   color: $desc-color;
   font-weight: 500;
   line-height: 1.17;
@@ -60,6 +64,11 @@
   }
 
   @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     line-height: 1.14;
   }
 }

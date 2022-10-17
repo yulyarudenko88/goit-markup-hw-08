@@ -64,10 +64,7 @@
 }
 
 .hero__title {
-  // max-width: 696px;
-  // margin-right: auto;
   margin-bottom: 30px;
-  // margin-left: auto;
 
   color: $white-color;
   @include font(900, 26px, 1.62);
@@ -75,7 +72,14 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
+  @media screen and (min-width: $tablet) {
+    max-width: 360px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   @media screen and (min-width: $desktop) {
+    max-width: 696px;
     @include font(900, 44px, 1.36);
   }
 }
