@@ -44,8 +44,12 @@
     &:focus {
       color: $accent-color;
     }
+
+    &--current {
+      color: $accent-color;
+    }
   }
-  
+
   .header__contacts {
     margin-bottom: 64px;
   }

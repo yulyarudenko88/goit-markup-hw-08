@@ -82,7 +82,8 @@
   }
 }
 
-.project-thumb:hover .overlay-desc {
+.project-thumb:hover .overlay-desc,
+.link:focus .overlay-desc {
   transform: translateY(0);
 }
 

@@ -27,12 +27,16 @@
   transition: scale $time-function;
 
   padding: 40px;
-  min-width: 450px;
-  min-height: 609px;
+  width: 320px;
   border-radius: 4px;
 
   background-color: $white-color;
   box-shadow: $shadow-modal;
+
+  @media screen and (min-width: $mobile) {
+    min-width: 450px;
+    min-height: 609px;
+  }
 
   @media screen and (min-width: $desktop) {
     min-width: 528px;

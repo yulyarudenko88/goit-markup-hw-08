@@ -119,12 +119,17 @@ p {
   -webkit-transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
-  min-width: 450px;
-  min-height: 609px;
+  width: 320px;
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+    min-height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -552,6 +557,9 @@ p {
   .nav__link:hover, .nav__link:focus {
     color: #2196f3;
   }
+  .nav__link--current {
+    color: #2196f3;
+  }
   .header__contacts {
     margin-bottom: 64px;
   }
@@ -669,7 +677,7 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1200px;
+    max-width: 1600px;
     padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop/hero-banner-1600.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero-banner-1600.jpg");
@@ -889,7 +897,7 @@ p {
   line-height: 1.14;
   text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .benefits-section__title {
     text-align: center;
   }
@@ -1086,8 +1094,7 @@ p {
 }
 
 .clients-section__link {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  height: 92px;
   border-width: 1px;
   border-style: solid;
   border-color: #afb1b8;
@@ -1404,7 +1411,8 @@ p {
   }
 }
 
-.project-thumb:hover .overlay-desc {
+.project-thumb:hover .overlay-desc,
+.link:focus .overlay-desc {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
