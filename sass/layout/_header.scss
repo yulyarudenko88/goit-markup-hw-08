@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid $border-header-color; 
+  border-bottom: 1px solid $border-header-color;
 
   @media screen and (max-width: 767px) {
     padding: 10px 0;
@@ -17,30 +17,41 @@
   @media screen and (min-width: $tablet) {
     gap: 87px;
   }
+
+  @media screen and (min-width: $desktop) {
+    gap: 92px;
+  }
 }
 
 .header__dropdown-menu {
-  display: flex;
-
   @media screen and (min-width: $tablet) {
+    display: flex;
     gap: 87px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 302px;
   }
 }
 
 .header__contacts {
-  display: flex;
-  justify-content: center;
-  
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+  }
+
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-direction: column-reverse;
   }
 
   @media screen and (min-width: $desktop) {
+    flex-direction: row-reverse;
+    align-items: center;
     gap: 50px;
   }
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
   .header__item:not(:first-child) {
     margin-bottom: 10px;
   }
@@ -59,7 +70,7 @@
     color: $accent-color;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) {
     font-size: 12px;
   }
 
@@ -69,6 +80,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
+    font-size: 14px;
     line-height: 1.14;
   }
 }

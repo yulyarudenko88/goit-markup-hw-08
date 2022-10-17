@@ -21,43 +21,79 @@
     <!--Heder-->
     <header class="header">
       <div class="header__body container">
-        <nav class="nav">
-          <a class="logo link" href="./index.html">
-            <span class="logo__accent">Web</span>Studio
-          </a>
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link link" href="./index.html">Студія</a>
-            </li>
-            <li class="nav__item">
+        <a class="logo link" href="./index.html">
+          <span class="logo__accent">Web</span>Studio
+        </a>
+        <button
+          class="button__menu js-open-menu"
+          type="button"
+          aria-disabled="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="button__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="header__dropdown-menu js-menu-container" id="mobile-menu">
+          <button
+            class="button__menu js-close-menu"
+            type="button"
+            aria-disabled="false"
+            aria-controls="mobile-close-menu"
+          >
+            <svg class="button__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close_menu"></use>
+            </svg>
+          </button>
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__contacts list">
+            <li class="header__item">
               <a
-                class="nav__link nav__link-current link"
-                href="./portfolio.html"
-                >Портфоліо</a
-              >
+                class="header__contact header__contact--blue link"
+                href="tel:+380961111111"
+                ><svg class="header__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11
+              </a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="#">Контакти</a>
+            <li class="header__item">
+              <a class="header__contact link" href="mailto:@devstudio.com">
+                <svg class="header__icon header__icon--size">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="header__contacts list">
-          <li class="header__item">
-            <a class="header__contact link" href="mailto:@devstudio.com">
-              <svg class="header__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header__item">
-            <a class="header__contact link" href="tel:+380961111111"
-              ><svg class="header__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="menu-social-list list">
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">Instagram</a>
+            </li>
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">Twitter</a>
+            </li>
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">Facebook</a>
+            </li>
+            <li class="menu-social-list__item">
+              <a class="menu-social-list__link link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!--Main content-->
