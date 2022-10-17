@@ -1,18 +1,51 @@
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  gap: 8px;
+  column-gap: 8px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
+
 .projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.projects-item {
+  @media screen and (max-width: 766px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .projects-item .link {
   display: block;
   transition: box-shadow $time-function;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+  }
 }
 
 .projects-item .link:hover,
@@ -32,13 +65,21 @@
   transform: translateY(101%);
   transition: transform $time-function;
 
-  padding: 63px 24px;
+  padding: 77px 24px;
   height: 100%;
 
   font-size: 18px;
   line-height: 1.6;
   color: $white-color;
   background-color: $project-overlay;
+
+  @media screen and (min-width: $tablet) {
+    padding: 49px 24px 77px 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 63px 24px;
+  }
 }
 
 .project-thumb:hover .overlay-desc {
@@ -65,4 +106,8 @@
   border-right: 1px solid $border-project-color;
   border-bottom: 1px solid $border-project-color;
   border-left: 1px solid $border-project-color;
+
+  @media screen and (min-width: $tablet) {
+    flex-grow: 1;
+  }
 }
