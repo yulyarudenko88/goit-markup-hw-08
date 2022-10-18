@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-  
+
     width: 100vw;
     height: 100vh;
     padding-top: 48px;
@@ -52,6 +52,10 @@
     &--current {
       color: $accent-color;
     }
+
+    @media screen and (max-width: 479px) {
+      font-size: 30px;
+    }
   }
 
   .header__contacts {
@@ -76,7 +80,7 @@
       color: $accent-color;
     }
 
-    @media screen and (max-width: 340px) {
+    @media screen and (max-width: 479px) {
       &--blue {
         font-size: 30px;
       }
