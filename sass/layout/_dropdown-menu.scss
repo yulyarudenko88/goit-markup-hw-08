@@ -25,9 +25,10 @@
   
   .nav__list {
     margin-bottom: 302px;
-    @media screen and (width: 375px) {
-      margin-bottom: 150px;
-    }
+
+    // @media screen and (width: 375px) {
+    //   margin-bottom: 150px;
+    // }
   }
   
   .nav__item:not(:last-child) {
@@ -75,16 +76,16 @@
       color: $accent-color;
     }
 
-    @media screen and (max-width: 340px) {
-      &--blue {
-        font-size: 30px;
-      }
-    }
+    // @media screen and (max-width: 340px) {
+    //   &--blue {
+    //     font-size: 30px;
+    //   }
+    // }
   }  
 
   .menu-social-list {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 10px;
   }
   
